@@ -1,10 +1,10 @@
-import "./styles.css";
-
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+function addComment(button) {
+  var newComment = $(
+    '<li id="item1"> add-comment <a href="javascript:void(0)" class="myButton">add</a></li>'
+  );
+  newComment.find(".myButton").click(function () {
+    addComment(this);
+  });
+  newComment.appendChild(document.createTextNode(commentContent));
+  list.appendChild(newComment);
+}
